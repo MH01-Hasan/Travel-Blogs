@@ -1,0 +1,25 @@
+
+
+.review-com{
+    margin-top: 100px;
+}
+
+.blogs-footer{
+    display: flex;
+    justify-content: space-between;
+    padding: 1px 9px;
+    font-family: auto;
+    margin-top: 9px;
+}
+
+.Details-btn{
+    border: none;
+    background-color: #038489;
+    color: white;
+    padding: 3px 22px;
+    border-radius: 5px;
+}
+
+.Details-btn:hover{
+    background-color: #c70707;
+}

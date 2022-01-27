@@ -1,0 +1,14 @@
+.panding-btn{
+    margin-left: 62px;
+    border: 1px solid gray;
+    border-radius: 5px;
+    background-color: cadetblue;
+}
+
+.approber-btn{
+    padding: 3px;
+    margin: 2px;
+    border: none;
+    background-color: burlywood;
+    border-radius: 5px;
+}

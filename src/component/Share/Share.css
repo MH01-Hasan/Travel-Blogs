@@ -1,0 +1,57 @@
+.post-input{
+    border-radius: 6px;
+    border: 1px solid;
+    padding: 34px;
+    width: 92%;
+}
+
+.post-input-fild{
+    width: 100%;
+    padding: 4px;
+}
+
+.textarea-input-fild{
+    width: 100%;
+    padding: 7px;
+}
+.fild-name-post{
+    font-family: monospace;
+    margin: 0px;
+}
+
+
+input[type="radio"]{
+    display: none;
+
+}
+
+.star{
+    cursor: pointer;
+    transition: color 200ms;
+}
+
+.submit-btn{
+    background-color: #b7044d;
+    padding: 4px 33px;
+    border-radius: 26px;
+    color: white;
+    border: none;
+}
+
+.reting{
+    margin-bottom: 0px;
+    font-family: monospace;
+    color: darkgreen;
+    font-weight: 700;
+}
+
+
+.share-exp{
+    color: #a50b0b;
+    font-family: serif;
+    letter-spacing: 1px;
+}
+
+.shate-post{
+    padding-top: 35px;
+}

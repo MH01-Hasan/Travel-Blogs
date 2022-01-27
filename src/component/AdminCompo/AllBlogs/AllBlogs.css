@@ -1,0 +1,43 @@
+.act-btn{
+    border: 1px solid gray;
+    border-radius: 5px;
+    background-color: cadetblue;
+    margin-right: 13px;
+}
+
+.icon{
+    font-size: 22px;
+}
+.show-reating{
+    display: flex;
+    
+}
+
+.rting{
+    color: #282322;
+    display: flex;
+    margin-right: 2px;
+    font-family: monospace;
+    margin-top: 5px;
+    font-weight: bolder
+}
+
+.actionn-btn{
+   
+}
+
+.data-fild{
+    padding: 0px;
+}
+
+.allblogs-com{
+    text-align: center;
+    font-family: emoji;
+    letter-spacing: 2px;
+    color: #f74606;
+    
+}
+.name-dispaly{
+    font-family: monospace;
+    font-size: 18px;
+}

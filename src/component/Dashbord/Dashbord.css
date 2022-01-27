@@ -1,0 +1,45 @@
+.dashbord-list{
+    background-color: #2D2F3E;
+    padding-left: 47px;
+    /* height: 100vh; */
+    padding-top: 42px; 
+}
+
+.dashbord-fild{
+    /* margin: 5px 27px; */
+}
+.dashboard-menu{
+    list-style: none;
+    text-align: start;
+    font-size: 15px;
+    margin-bottom: 14px;
+    font-family: monospace;
+    color: whitesmoke;
+}
+
+.dashboard-menu:hover{
+    color: #ac09ef;
+}
+
+.log-out-btn{
+    border: none;
+    color: #ffffff;
+    border-radius: 2px;
+    background-color: #14bd83;
+}
+
+.dash-user{
+    list-style: none;
+    color: white;
+    display: flex;
+    align-items: center;
+    margin-top: 23px;
+    font-size: 18px;
+    font-family: monospace;
+    flex-direction: column;
+    margin-bottom: 28px;
+}
+.user-icon{
+    color: #f2f2f2;
+    font-size: 47px;
+}
