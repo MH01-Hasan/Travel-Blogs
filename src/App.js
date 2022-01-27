@@ -12,6 +12,7 @@ import Dashbord from './component/Dashbord/Dashbord';
 import Home from './component/Home/Home';
 import DetailsBlogs from './component/DetailsBlogs/DetailsBlogs';
 import PrivateRoute from './component/Login/PrivateRoute/PrivateRoute';
+import Footer from './component/Footer/Footer';
 
 function App() {
   return (
@@ -46,6 +47,7 @@ function App() {
       <NotFound/>
     </Route>
  </Switch>
+ <Footer></Footer>
 </Router>
 </AuthProvider>
     </div>

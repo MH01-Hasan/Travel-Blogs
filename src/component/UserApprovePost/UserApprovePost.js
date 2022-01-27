@@ -34,7 +34,7 @@ const UserApprovePost = () => {
        <div>
            
              <div className='mx-3 mt-5 mb-5'>
-        <h2 className='allblogs-com'>All Blogs Panding  Post</h2>
+        <h2 className='allblogs-com'>All Blogs Approved  Post</h2>
       <div className="row">
   {
     approvePost.map(pandingblogs =>   <div className='col-lg-6 col-sm-12 mt-3'>
