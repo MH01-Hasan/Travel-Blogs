@@ -7,12 +7,7 @@ import './HomeBlogs.css'
 
 const HomeBlogs = () => {
     const [homeblogs ,setHomeblogs]=useState([])
-
-        console.log(homeblogs)
-
         const {user}=UseAuth()
-
-
         useEffect(()=>{
         fetch('http://localhost:5000/Blogs')
         .then(res => res.json())
@@ -35,12 +30,7 @@ const HomeBlogs = () => {
               <div className='blogs-footer'>
               <h5>{blogs.title}</h5>
               <p><i class="far fa-calendar-alt"></i> {blogs.date}</p>
-
               </div>
-                
-                 
-
-
               </Card.Body>             
                   <ListGroup variant="flush">
                   <ListGroup.Item>
@@ -57,8 +47,7 @@ const HomeBlogs = () => {
                                  
                                  />}
                             
-                                </div>
-                                
+                                </div>        
                             )
                          })}
                     <div className='actionn-btn'>

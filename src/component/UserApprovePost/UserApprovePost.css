@@ -1,0 +1,6 @@
+.error-mas{
+    display: flex;
+    justify-content: center;
+    margin-top: 61px;
+    color: red;
+}

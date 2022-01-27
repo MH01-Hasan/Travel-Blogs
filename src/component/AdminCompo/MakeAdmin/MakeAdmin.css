@@ -1,0 +1,38 @@
+.input-field{
+    width: 308px;
+    height: 41px;
+     margin-left: 72px;
+    
+}
+
+.make-admin{
+    color: #035858;
+    font-family: serif;
+    letter-spacing: 10px;
+    text-align: center;
+    margin: 49px 0px;
+    font-size: 54px;
+}
+
+
+.text-admin{
+    color: #000000b0;
+    font-size: 18px;
+    font-family: auto;
+    font-weight: 700;
+    margin-left: 71px;
+    letter-spacing: 3px;
+}
+
+.admin-submit-btn{
+    background-color: coral;
+    padding: 9px 34px;
+    margin-top: 23px;
+    border: none;
+    border-radius: 5px;
+    color: azure;
+    margin-bottom: 44px;
+    margin-left: 72px;
+
+
+}

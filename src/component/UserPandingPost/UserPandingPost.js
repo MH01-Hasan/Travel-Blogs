@@ -10,7 +10,7 @@ const UserPandingPost = () => {
     const {user}= UseAuth()
 
     const [pandingpost, setPandingpost] = useState([]);
-    console.log(pandingpost)
+   
 
   useEffect(() => {
     fetch(`http://localhost:5000/mypost/${user?.email}`)
@@ -40,6 +40,13 @@ fetch(url,{
 })}}
 
 ///**************/delet meathod****************************/////
+if(!pandingpost.length){
+  return <div>
+      <h4 className='error-mas'> No Data Panding </h4>
+  </div>
+
+  
+}
 
 
 

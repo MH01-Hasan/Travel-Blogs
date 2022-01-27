@@ -6,7 +6,7 @@ import './Header.css'
 
 const Header = () => {
     const{user,logout}=UseAuth()
-    console.log(user)
+
     return (
         <div>
                <Navbar  bg="dark" variant="dark"  expand="lg">
@@ -17,10 +17,10 @@ const Header = () => {
                 <Navbar.Text>
                     <NavLink to='/home' className="header-nav" >Home</NavLink>
                     <NavLink to='/blogs' className="header-nav" >Blogs</NavLink>
-                    <NavLink to='/dashboard' className="header-nav" >Dashboard</NavLink>
+                   {user?.email && <NavLink to='/dashboard' className="header-nav" >Dashboard</NavLink>}
                     
                     {!user?.email ?<NavLink to='/login' className="header-nav" >Login</NavLink>:
-             <Button  className='logout' onClick ={logout}>Log out</Button>}
+                 <Button  className='logout' onClick ={logout}>Log out</Button>}
                 </Navbar.Text>
                 </Navbar.Collapse>
             </Container>

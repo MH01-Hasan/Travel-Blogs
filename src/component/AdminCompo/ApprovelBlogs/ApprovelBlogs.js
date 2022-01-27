@@ -55,7 +55,7 @@ fetch(url,{
 
     return (
         <div className='mx-3 mt-5 mb-5'>
-        <h2 className='allblogs-com'>All Panding Blogs</h2>
+        <h2 className='allblogs-com'>All Approve Blogs</h2>
         <div className="row">
             {
               Approvedblogs.map(pandingblogs =>   <div className='col-lg-6 col-sm-12 mt-3'>

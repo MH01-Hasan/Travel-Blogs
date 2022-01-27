@@ -11,6 +11,7 @@ import AuthProvider from './contex/AuthProvider';
 import Dashbord from './component/Dashbord/Dashbord';
 import Home from './component/Home/Home';
 import DetailsBlogs from './component/DetailsBlogs/DetailsBlogs';
+import PrivateRoute from './component/Login/PrivateRoute/PrivateRoute';
 
 function App() {
   return (
@@ -25,9 +26,9 @@ function App() {
    <Route exact path="/home">
      <Home></Home>
     </Route>
-    <Route path='/details/:id'>
+    <PrivateRoute  path='/details/:id'>
        <DetailsBlogs></DetailsBlogs>
-     </Route>
+     </PrivateRoute>
     
   
     <Route  path="/login">
@@ -36,9 +37,9 @@ function App() {
     <Route  path="/register">
       <Register/>
     </Route>
-    <Route  path="/dashboard">
+    <PrivateRoute  path="/dashboard">
       <Dashbord/>
-    </Route>
+    </PrivateRoute>
 
    
     <Route  path="*">
