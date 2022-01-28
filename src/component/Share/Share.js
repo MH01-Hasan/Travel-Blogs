@@ -15,7 +15,7 @@ const Share = () => {
     const onSubmit = data => {
         data.email = user.email;
         data.status = `Pending`;
-        axios.post('http://localhost:5000/Blogs',data)
+        axios.post('https://radiant-chamber-60887.herokuapp.com/Blogs',data)
     .then(res => {
         if(res.data.insertedId){
             Swal.fire({

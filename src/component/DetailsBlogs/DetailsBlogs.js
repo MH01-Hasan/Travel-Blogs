@@ -14,7 +14,7 @@ const DetailsBlogs = () => {
     const{user}= UseAuth()
 
     useEffect(()=>{
-        fetch(`http://localhost:5000/Blogs/${id}`)
+        fetch(`https://radiant-chamber-60887.herokuapp.com/Blogs/${id}`)
         .then(res => res.json())
         .then(data => setData(data))
     },[])

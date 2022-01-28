@@ -74,7 +74,7 @@ import initialize from "../component/Firebase/firevaseInt";
    /// user info send to data base///
    const hanldeUser= (email ) => {
     
-    fetch("http://localhost:5000/user", {
+    fetch("https://radiant-chamber-60887.herokuapp.com/user", {
       method: "POST",
       headers: { "content-type": "application/json" },
       body: JSON.stringify({ email }),

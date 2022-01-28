@@ -27,3 +27,26 @@
 .Details-btn:hover{
     background-color: #c70707;
 }
+
+.home-image{
+    height: 220px;
+}
+
+
+.pageCount{
+    margin-left: 21px;
+    margin-top: 18px;
+}
+
+
+
+.pageCount button{
+    margin-left: 16px;
+    border: 1px solid gray;
+    border-radius: 3px;
+
+}
+
+.pageCount .selected{
+    background-color: #e91b5e;
+}

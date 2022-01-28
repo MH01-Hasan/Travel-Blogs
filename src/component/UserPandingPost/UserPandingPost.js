@@ -13,10 +13,10 @@ const UserPandingPost = () => {
    
 
   useEffect(() => {
-    fetch(`http://localhost:5000/mypost/${user?.email}`)
+    fetch(`https://radiant-chamber-60887.herokuapp.com/mypost/${user?.email}`)
       .then((res) => res.json())
       .then((data) => {
-        const PendingData =data.filter(data =>data.status ==="Pending")
+        const PendingData =data.Blogs.filter(data =>data.status ==="Pending")
         setPandingpost(PendingData)
         
         });
@@ -26,7 +26,7 @@ const UserPandingPost = () => {
 const handleDelet = (id)=>{
   const prosid =window.confirm('are you sure delete')
 if(prosid){
-  const url = `http://localhost:5000/Blogs/${id}`
+  const url = `https://radiant-chamber-60887.herokuapp.com/Blogs/${id}`
 fetch(url,{
   method:'DELETE'
 })

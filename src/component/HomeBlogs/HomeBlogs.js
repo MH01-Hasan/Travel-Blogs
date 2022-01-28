@@ -2,19 +2,30 @@ import React, { useEffect, useState } from 'react';
 import { Card, ListGroup } from 'react-bootstrap';
 import { FaStar } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
-import UseAuth from '../../hooks/UseAuth';
+// import UseAuth from '../../hooks/UseAuth';
 import './HomeBlogs.css'
 
 const HomeBlogs = () => {
     const [homeblogs ,setHomeblogs]=useState([])
-        const {user}=UseAuth()
+    const [pageCount, setPageCount]=useState(0)
+    const[page,setPage]=useState(0)
+    const size = 10;
+        // const {user}=UseAuth()
+
         useEffect(()=>{
-        fetch('http://localhost:5000/Blogs')
+        fetch(`https://radiant-chamber-60887.herokuapp.com/Blogs?page=${page}&&size=${size}`)
         .then(res => res.json())
         .then(data =>{
-            const setApprovedData =data.filter(data =>data.status ==="Approved")
-            setHomeblogs(setApprovedData)})
-        },[])
+            const setApprovedData =data.Blogs.filter(data =>data.status ==="Approved")
+            setHomeblogs(setApprovedData);
+            const count = data.count;
+            const pagenumber = Math.ceil(count /size);
+            setPageCount(pagenumber)
+        
+        });
+           
+
+        },[page])
 
 
     return (
@@ -26,7 +37,7 @@ const HomeBlogs = () => {
               <Card>
               <Card.Header><i class="fas fa-user-circle icon"></i> {blogs.travelerInfo}</Card.Header>
               <Card.Body className='data-fild'>
-              <Card.Img variant="top" src={blogs.image} className='img-fluid max-width: 100%;' />
+              <Card.Img variant="top" src={blogs.image} className='img-fluid max-width: 100%; home-image' />
               <div className='blogs-footer'>
               <h5>{blogs.title}</h5>
               <p><i class="far fa-calendar-alt"></i> {blogs.date}</p>
@@ -65,6 +76,18 @@ const HomeBlogs = () => {
               </Card>
           </div>)  
             }
+
+            <div className='pageCount'>
+               { [...Array(pageCount).keys()]
+               .map(number => <button 
+                className = {number === page ? "selected" : " "}
+                 keu={number}
+                onClick={()=> setPage(number)}
+                >{number+1}</button>)
+               
+               }
+
+            </div>
 
         </div>
       

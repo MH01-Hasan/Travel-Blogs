@@ -14,10 +14,10 @@ const PandingBlogs = () => {
    
 
         useEffect(()=>{
-        fetch('http://localhost:5000/Blogs')
+        fetch('https://radiant-chamber-60887.herokuapp.com/Blogs')
         .then(res => res.json())
         .then(data =>{
-            const PendingData =data.filter(data =>data.status ==="Pending")
+            const PendingData =data.Blogs.filter(data =>data.status ==="Pending")
             setPandingblogs(PendingData)
         })
         },[])
@@ -26,7 +26,7 @@ const PandingBlogs = () => {
 // //handel Approvel data////
 const handleApproved = (id) => {
     axios
-      .put(`http://localhost:5000/Blogs/${id}`, {
+      .put(`https://radiant-chamber-60887.herokuapp.com/Blogs/${id}`, {
         status: "Approved",
       })
       .then((res) => {

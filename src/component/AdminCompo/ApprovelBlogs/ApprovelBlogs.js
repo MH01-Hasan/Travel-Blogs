@@ -12,10 +12,10 @@ const ApprovelBlogs = () => {
    
 
         useEffect(()=>{
-        fetch('http://localhost:5000/Blogs')
+        fetch('https://radiant-chamber-60887.herokuapp.com/Blogs')
         .then(res => res.json())
         .then(data =>{
-            const setApprovedData =data.filter(data =>data.status ==="Approved")
+            const setApprovedData =data.Blogs.filter(data =>data.status ==="Approved")
             setApproved(setApprovedData)
         })
         },[])
@@ -24,7 +24,7 @@ const ApprovelBlogs = () => {
 const handleDelet = (id)=>{
   const prosid =window.confirm('are you sure delete')
 if(prosid){
-  const url = `http://localhost:5000/Blogs/${id}`
+  const url = `https://radiant-chamber-60887.herokuapp.com/Blogs/${id}`
 fetch(url,{
   method:'DELETE'
 })

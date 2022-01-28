@@ -21,7 +21,7 @@ const sweetalart = () =>{
 const { register, handleSubmit, reset  } = useForm();
 
 const onSubmit = (data) => {
-    fetch("http://localhost:5000/makeadmin", {
+    fetch("https://radiant-chamber-60887.herokuapp.com/makeadmin", {
       method: "PUT",
       headers: { "content-type": "application/json" },
       body: JSON.stringify(data),
