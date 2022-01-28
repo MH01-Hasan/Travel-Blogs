@@ -11,9 +11,9 @@ const AllBlogs = () => {
 
 const [blogs ,setBlogs]=useState([])
 
-console.log(blogs)
 
-const {user}=UseAuth()
+
+
 useEffect(()=>{
 fetch('https://radiant-chamber-60887.herokuapp.com/Blogs')
 .then(res => res.json())
@@ -59,6 +59,7 @@ if (!blogs?.length) {
     return (
         <div className='mx-3 mt-5 mb-5'>
         <h2 className='allblogs-com'>All Blogs</h2>
+        <p>All Blogs : {blogs.length}</p>
         <div className="row">
             {
               blogs.map(blogs => <div className='col-lg-6  col-sm-12 mt-3'>
@@ -96,7 +97,9 @@ if (!blogs?.length) {
                         <button  className='Details-btn'>Veiws</button>
                         </Link>
                     </div>
+                   
                   </div>
+                  <p>Status: {blogs.status}</p>
       
                   </ListGroup.Item>
                   

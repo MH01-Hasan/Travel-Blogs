@@ -23,14 +23,17 @@ const UserApprovePost = () => {
   }, [user.email]);
 
   if(!approvePost.length){
-      return  <button class="btn btn-primary spner-btn" type="button" disabled>
-      <span
-        class="spinner-border spinner-border-sm"
-        role="status"
-        aria-hidden="true"
-      ></span>
-      Loading...
-    </button>
+      return   <div>
+      <h4 className='no-data'>No Data Found</h4>
+      <button class="btn btn-primary spner-btn" type="button" disabled>
+       <span
+      class="spinner-border spinner-border-sm"
+      role="status"
+      aria-hidden="true"
+    ></span>
+    Loading...
+  </button>
+    </div>
   
       
   }

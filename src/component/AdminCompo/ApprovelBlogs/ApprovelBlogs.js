@@ -5,12 +5,7 @@ import { Link } from 'react-router-dom';
 import Swal from 'sweetalert2';
 
 const ApprovelBlogs = () => {
-
-
     const [Approvedblogs ,setApproved]=useState([])
-    console.log(Approvedblogs)
-   
-
         useEffect(()=>{
         fetch('https://radiant-chamber-60887.herokuapp.com/Blogs')
         .then(res => res.json())
@@ -56,6 +51,7 @@ fetch(url,{
     return (
         <div className='mx-3 mt-5 mb-5'>
         <h2 className='allblogs-com'>All Approve Blogs</h2>
+        <p>All Approve Blogs : {Approvedblogs.length}</p>
         <div className="row">
             {
               Approvedblogs.map(pandingblogs =>   <div className='col-lg-6 col-sm-12 mt-3'>

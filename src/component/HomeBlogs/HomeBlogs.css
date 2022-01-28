@@ -29,7 +29,7 @@
 }
 
 .home-image{
-    height: 220px;
+    height: 250px;
 }
 
 
@@ -44,9 +44,22 @@
     margin-left: 16px;
     border: 1px solid gray;
     border-radius: 3px;
+    padding: 0px 27px;
 
 }
 
 .pageCount .selected{
     background-color: #e91b5e;
+}
+
+.Toprate{
+    text-align: center;
+    margin-bottom: 28px;
+    font-family: auto;
+    color: white;
+    margin-top: 13px;
+}
+
+.top-rate{
+    background-color: #488973;
 }

@@ -4,6 +4,7 @@ import { FaStar } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import Swal from 'sweetalert2';
 import UseAuth from '../../hooks/UseAuth';
+import './UserPandingPost.css'
 
 const UserPandingPost = () => {
 
@@ -41,7 +42,9 @@ fetch(url,{
 
 ///**************/delet meathod****************************/////
 if(!pandingpost.length){
-  return  <button class="btn btn-primary spner-btn" type="button" disabled>
+  return  <div>
+    <h4 className='no-data'>No Data Found</h4>
+    <button class="btn btn-primary spner-btn" type="button" disabled>
      <span
     class="spinner-border spinner-border-sm"
     role="status"
@@ -49,6 +52,7 @@ if(!pandingpost.length){
   ></span>
   Loading...
 </button>
+  </div>
 
   
 }

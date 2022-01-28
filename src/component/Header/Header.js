@@ -9,7 +9,7 @@ const Header = () => {
 
     return (
         <div>
-               <Navbar  bg="dark" variant="dark"  expand="lg">
+               <Navbar   bg="dark" variant="dark"  expand="lg">
             <Container>
                 <Navbar.Brand href="#home">Travelers' Experiences</Navbar.Brand>
                 <Navbar.Toggle />
@@ -20,7 +20,7 @@ const Header = () => {
                     
                     {!user?.email ?<NavLink to='/login' className="header-nav" >Login</NavLink>:
                  <Button  className='logout' onClick ={logout}>Log out</Button>}
-                {user?.email && <small>{user.displayName}</small>}
+                {user?.email && <small className='name-nav'>{user.displayName}</small>}
                 </Navbar.Text>
                 </Navbar.Collapse>
             </Container>

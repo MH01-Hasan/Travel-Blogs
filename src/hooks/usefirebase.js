@@ -1,5 +1,5 @@
 import { getAuth, signInWithPopup, GoogleAuthProvider,signOut,
-    onAuthStateChanged, createUserWithEmailAndPassword, signInWithEmailAndPassword, updateProfile } from "firebase/auth";
+    onAuthStateChanged, createUserWithEmailAndPassword, signInWithEmailAndPassword, updateProfile,sendEmailVerification  } from "firebase/auth";
   
   import { useEffect } from "react";
   import { useState } from "react";
@@ -22,6 +22,7 @@ import initialize from "../component/Firebase/firevaseInt";
       createUserWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
         setErroe('');
+        emailverify()
           const newUser = { displayName: name, email };
               setUser(newUser);
 
@@ -41,7 +42,16 @@ import initialize from "../component/Firebase/firevaseInt";
               })
               .finally(() => setLodding(false));
           }
+//email and password creat register from ////
 
+
+const emailverify = () =>{
+  sendEmailVerification(auth.currentUser)
+  .then(() => {
+   
+  });
+
+}
 
 
 
@@ -57,6 +67,7 @@ import initialize from "../component/Firebase/firevaseInt";
     .then((userCredential) => {
       const redairect = location.state?.from || '/home'
       history.push(redairect);
+     
 
       const user = userCredential.user;
     
@@ -94,7 +105,8 @@ import initialize from "../component/Firebase/firevaseInt";
         signInWithPopup(auth, googleprovider)
             .then((result) => {
                 const user = result.user;
-                hanldeUser(user.email, user.displayName, 'PUT')
+                hanldeUser(user.email);
+                setUser(user)
                 setErroe('');
                 const destination = location?.state?.from || '/';
                 history.replace(destination);

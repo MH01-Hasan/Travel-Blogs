@@ -14,14 +14,14 @@ const Login = () => {
 
     const redairect = location.state?.from || '/home'
     
-    const{loginuser}=UseAuth()
+    const{loginuser,signInWithGoogle}=UseAuth()
     const onSubmit = data =>{ 
         loginuser(data.email,data.password,history,location)
-          console.log(data)
           reset()
-        
-        
         };
+        const handelgoogle= ()=>{
+            signInWithGoogle(location,history)
+        }
     return (
         <div className='container mt-5'>
         <div className='row login-fild'>
@@ -44,6 +44,8 @@ const Login = () => {
                     </form>
                     <NavLink to="/register" className='togol'> New User? Please Register</NavLink>
                 </div>
+
+                <button className='google-btn' onClick={()=>handelgoogle()}>Google Login</button>
                
 
            
