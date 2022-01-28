@@ -19,8 +19,8 @@ const HomeBlogs = () => {
             const setApprovedData =data.Blogs.filter(data =>data.status ==="Approved")
             setHomeblogs(setApprovedData);
 
-            const topratingsport =data.Blogs.filter(data =>data.reting ==="5")
-            setToprate(topratingsport)
+            // const topratingsport =data.Blogs.filter(data =>data.reting ==="5")
+            // setToprate(topratingsport)
 
             const count = data.count;
             const pagenumber = Math.ceil(count /size);
@@ -28,6 +28,16 @@ const HomeBlogs = () => {
         
         });  
         },[page])
+
+        // Reting Data LOad///
+        useEffect(()=>{
+            fetch(`https://radiant-chamber-60887.herokuapp.com/Blogs`)
+            .then(res => res.json())
+            .then(data =>{
+                const topratingsport =data.Blogs.filter(data =>data.reting ==="5" && data.status ==="Approved" )
+                setToprate(topratingsport)
+            });  
+            },[])
 
 
     return (
