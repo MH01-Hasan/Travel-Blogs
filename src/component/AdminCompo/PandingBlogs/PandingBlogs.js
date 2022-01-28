@@ -63,9 +63,9 @@ if (!pandingblogs?.length) {
             {
               pandingblogs.map(pandingblogs =>   <div className='col-lg-6 col-sm-12 mt-3'>
               <Card>
-              {/* <Card.Header><i class="fas fa-user-circle icon"></i> {email}</Card.Header> */}
+             
               <Card.Body className='data-fild'>
-              <Card.Img variant="top" src={pandingblogs.image} className='img-fluid max-width: 100%;' />
+              <Card.Img variant="top" src={pandingblogs.image} className='img-fluid max-width: 100% home-image' />
                  <h6>{pandingblogs.title}</h6>
                  
 

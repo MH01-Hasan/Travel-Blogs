@@ -62,7 +62,7 @@ fetch(url,{
               <Card>
               {/* <Card.Header><i class="fas fa-user-circle icon"></i> {email}</Card.Header> */}
               <Card.Body className='data-fild'>
-              <Card.Img variant="top" src={pandingblogs.image} className='img-fluid max-width: 100%;' />
+              <Card.Img variant="top" src={pandingblogs.image} className='img-fluid max-width: 100% home-image' />
                  <h6>{pandingblogs.title}</h6>
                  
               </Card.Body>            

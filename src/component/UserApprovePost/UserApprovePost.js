@@ -16,7 +16,7 @@ const UserApprovePost = () => {
     fetch(`https://radiant-chamber-60887.herokuapp.com/mypost/${user?.email}`)
       .then((res) => res.json())
       .then((data) => {
-        const approveData =data.filter(data =>data.status ==="Approved")
+        const approveData =data.Blogs.filter(data =>data.status ==="Approved")
         setApprovePost(approveData)
         
         });
@@ -40,7 +40,7 @@ const UserApprovePost = () => {
     approvePost.map(pandingblogs =>   <div className='col-lg-6 col-sm-12 mt-3'>
     <Card>
     <Card.Body className='data-fild'>
-    <Card.Img variant="top" src={pandingblogs.image} className='img-fluid max-width: 100%;' />
+    <Card.Img variant="top" src={pandingblogs.image} className='img-fluid max-width: 100% home-image' />
        <h6>{pandingblogs.title}</h6>
     </Card.Body>                
         <ListGroup variant="flush">

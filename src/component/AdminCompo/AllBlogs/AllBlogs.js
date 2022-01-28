@@ -65,7 +65,7 @@ if (!blogs?.length) {
               <Card>
               <Card.Header><i class="fas fa-user-circle icon"></i><small className='name-dispaly'> {blogs.travelerInfo}</small></Card.Header>
               <Card.Body className='data-fild'>
-              <Card.Img variant="top" src={blogs.image} className='img-fluid max-width: 100%;' />
+              <Card.Img variant="top" src={blogs.image} className='img-fluid max-width: 100%; home-image' />
                  <h6>{blogs.title}</h6>
                  
 

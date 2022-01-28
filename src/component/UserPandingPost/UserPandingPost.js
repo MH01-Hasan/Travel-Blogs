@@ -58,7 +58,7 @@ if(!pandingpost.length){
     pandingpost.map(pandingblogs =>   <div className='col-lg-6 col-sm-12 mt-3'>
     <Card>
     <Card.Body className='data-fild'>
-    <Card.Img variant="top" src={pandingblogs.image} className='img-fluid max-width: 100%;' />
+    <Card.Img variant="top" src={pandingblogs.image} className='img-fluid max-width: 100% home-image' />
        <h6>{pandingblogs.title}</h6>
     </Card.Body>                
         <ListGroup variant="flush">
