@@ -41,9 +41,14 @@ fetch(url,{
 
 ///**************/delet meathod****************************/////
 if(!pandingpost.length){
-  return <div>
-      <h4 className='error-mas'> No Data Panding </h4>
-  </div>
+  return  <button class="btn btn-primary spner-btn" type="button" disabled>
+     <span
+    class="spinner-border spinner-border-sm"
+    role="status"
+    aria-hidden="true"
+  ></span>
+  Loading...
+</button>
 
   
 }

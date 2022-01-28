@@ -23,9 +23,14 @@ const UserApprovePost = () => {
   }, [user.email]);
 
   if(!approvePost.length){
-      return <div>
-          <h4 className='error-mas'> No Data Your Approved </h4>
-      </div>
+      return  <button class="btn btn-primary spner-btn" type="button" disabled>
+      <span
+        class="spinner-border spinner-border-sm"
+        role="status"
+        aria-hidden="true"
+      ></span>
+      Loading...
+    </button>
   
       
   }
