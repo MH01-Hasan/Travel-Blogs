@@ -16,7 +16,7 @@ const UserPandingPost = () => {
     fetch(`https://radiant-chamber-60887.herokuapp.com/mypost/${user?.email}`)
       .then((res) => res.json())
       .then((data) => {
-        const PendingData =data.Blogs.filter(data =>data.status ==="Pending")
+        const PendingData =data.filter(data =>data.status ==="Pending")
         setPandingpost(PendingData)
         
         });

@@ -16,7 +16,7 @@ const UserApprovePost = () => {
     fetch(`https://radiant-chamber-60887.herokuapp.com/mypost/${user?.email}`)
       .then((res) => res.json())
       .then((data) => {
-        const approveData =data.Blogs.filter(data =>data.status ==="Approved")
+        const approveData =data.filter(data =>data.status ==="Approved")
         setApprovePost(approveData)
         
         });
