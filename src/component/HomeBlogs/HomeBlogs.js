@@ -134,7 +134,8 @@ const HomeBlogs = () => {
         </div>
 
         <div className='pageCount'>
-               { [...Array(pageCount).keys()]
+            
+            <small>Pages :</small>   { [...Array(pageCount).keys()]
                .map(number => <button 
                 className = {number === page ? "selected" : " "}
                  key={number}
